@@ -16,15 +16,18 @@
     "type": "git",
     "url": "https://github.com/Crinsane/laravel-elixir-bower"
   },
-  "author": "Rob Gloudemans",
+  "author": {
+    "name": "Rob Gloudemans"
+  },
   "license": "MIT",
   "homepage": "https://github.com/Crinsane/laravel-elixir-bower",
   "bugs": {
     "url": "https://github.com/Crinsane/laravel-elixir-bower/issues"
   },
   "dependencies": {
-    "gulp-concat": "^2.4.1",
+    "gulp-concat-sourcemap": "^1.3.1",
     "gulp-filter": "^1.0.2",
+    "gulp-if": "^1.2.5",
     "gulp-load-plugins": "^0.7.0",
     "gulp-minify-css": "^0.3.11",
     "gulp-notify": "^2.0.0",
