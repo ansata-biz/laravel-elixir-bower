@@ -5,7 +5,8 @@ var filter = require('gulp-filter');
 var notify = require('gulp-notify');
 var minify = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
-var concat = require('gulp-concat-sourcemap');
+var concat_sm = require('gulp-concat-sourcemap');
+var concat = require('gulp-concat');
 var gulpIf = require('gulp-if');
 
 elixir.extend('bower', function(cssFile, cssOutput, jsFile, jsOutput) {
@@ -13,6 +14,11 @@ elixir.extend('bower', function(cssFile, cssOutput, jsFile, jsOutput) {
     var config = this;
     var cssFile = cssFile || 'vendor.css';
     var jsFile = jsFile || 'vendor.js';
+
+    if (!config.production)
+    {
+        concat = concat_sm;
+    }
 
     gulp.task('bower', ['bower-css', 'bower-js']);
 
